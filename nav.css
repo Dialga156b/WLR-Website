@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+.topnav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    overflow: visible;
+    padding: 1px;
+    background-image: linear-gradient(to right, rgba(15, 15, 15, 0.659), rgba(0, 0, 0, 0.73));
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.926);
+    height: fit-content;
+    width: 100%;
+    justify-content: inherit;
+    min-height: 39px;
+}
+
+.topnav, .topnav * {
+    box-sizing: border-box;
+}
+
+.topnav a {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0px 8px;
+    padding-top: 9px;
+    text-decoration: none;
+    font-size: 17px;
+    transition-duration: 0.2s;
+    height: 35px !important;
+    z-index: 100;
+}
+
+.topnav a:hover {
+    font-size: 19px;
+    color: rgb(223, 223, 223);
+    /*background-image: radial-gradient(rgba(255, 255, 255, 0.362), rgba(255, 255, 255, 0.1), transparent, transparent, transparent);*/
+    transition-timing-function: ease-out;
+    transition-duration: .2s;
+}
+
+.href-align-right {
+    float: left;
+
+}
+.href-align-left {
+    float: right;
+    margin-right: 10px;
+}
+
+.topnav a:hover img{
+    transition-timing-function: ease-out;
+    transform: rotate(+180deg);
+    transition: 0.4s;
+}
+
+body {
+    background-image: rgb(255,255,255);
+    margin: 0;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+/* Mobile UI */
+
+#mobile-x-button, #burger {
+    display: none;
+    transition-duration: 0.2s;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile {
+        position: relative;
+        background-color: rgba(0, 0, 0, 0);
+        display: flex;
+        flex-direction:column;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        height: fit-content;
+        min-width: 150px;
+        max-width: 80vw;
+        display: none;
+    }
+    .mobile a {
+        text-align: right;
+    }
+
+    .topnav {
+        background-color: rgba(0, 0, 0, 0.601);
+        display: flex;
+        justify-content: right;
+    }
+
+    #mobile-x-button, #burger {
+        display: block;
+    }
+    .topnav a:hover {
+        line-height: 28px;
+    }
+
+}
+
+/* Nav template: 
+<nav class="topnav">
+    <a href="index.html" style="line-height: 24px; padding-top: 9px;"><img src="image/home.png" alt="Home logo" style="height:35px; width:35px;"></a>
+    <div class="mobile">
+        <img src="image/xicon.png" alt="x button" id="mobile-x-button" style="position: absolute; width: 30px; height: 30px; cursor: pointer;">
+        <a href="first.html">FIRST</a>
+        <a href="occra.html">OCCRA</a>
+        <a href="308.html">308</a>
+        <a href="7178.html">7178</a>
+        <a href="sponsors.html">Sponsors</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="https://www.brodysonline.com/walledlakehsrobotics" target="_blank">Shop</a>
+    </div>
+    <a href="#" style="line-height: 24px; padding-top: 9px;" id="burger"><img src="image/burbur.png" alt="menu icon" style="height:35px; width:35px;"></a>
+</nav>
+
+<script src="js/nav.js"></script>
+*/
